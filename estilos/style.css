@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tapestry', cursive;
+    font-size: 18px;
+    color: black;
+}
+
+.container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr auto 0.5fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    grid-gap: 2px;
+}
+
+/*------------------HEADER/NAV--------------------*/
+
+.header {
+    grid-area: header;
+    height: 80px;
+    background-color: #d9c0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    width: 250px;
+    height: 150px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.header nav ul li a:hover {
+    color: rgb(138, 13, 131);
+    transition: 1s;
+}
+
+/*-----------------MAIN------------------------*/
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    background: url(../img/Baddies\ Girls\ Nails.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(138, 13, 131);
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.hero p{
+    font-size: 30px;
+}
+
+.hero a{
+    background-color: rgb(138, 13, 131);
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    background-color: #d9c0ff;
+    flex-direction: column;
+}
+
+.section__uno {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__uno>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__uno div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.section__uno div div img {
+    height: 300px;
+    width: 400px;
+}
+
+/*-----------------------MAIN--SERVICIOS-----------------*/
+
+.mainServicios {
+    grid-area: main;
+    display: flex;
+    background-color: #d9c0ff;
+    flex-direction: column;
+
+}
+
+.sectionServicios__uno {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionServicios__uno ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sectionServicios__uno ul li {
+    display: flex;
+    padding: 20px;
+}
+
+.sectionServicios__uno ul li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionServicios__uno ul li div a {
+    background-color: blueviolet;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.sectionServicios__uno img {
+    height: 300px;
+    width: 400px;
+}
+
+.sectionServicios__dos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionServicios__dos ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sectionServicios__dos ul li {
+    display: flex;
+    padding: 20px;
+}
+
+.sectionServicios__dos ul li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionServicios__dos ul li div a {
+    background-color: blueviolet;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.sectionServicios__dos img {
+    height: 300px;
+    width: 400px;
+}
+
+/*--------------------------MAIN---CUIDADOS----------------*/
+
+.mainCuidados {
+    grid-area: main;
+    background-color: #d9c0ff;
+}
+
+.mainCuidados h2 {
+    text-align: center;
+}
+
+.section__cuidadosUno>div {
+    display: flex;
+    align-items: center;
+}
+
+.section__cuidadosUno div img {
+    height: 600px;
+    width: 500px;
+}
+
+.section__cuidadosUno div .tituloParrafo {
+    margin: 40px;
+}
+
+.section__cuidadosDos>div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+.section__cuidadosDos div .tituloParrafo {
+    margin: 40px;
+}
+
+.section__cuidadosDos div img {
+    height: 600px;
+    width: 500px;
+}
+
+.section__cuidadosTres>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.section__cuidadosTres div .tituloParrafo {
+    margin: 40px;
+}
+
+.section__cuidadosTres div img {
+    height: 600px;
+    width: 500px;
+}
+
+/*----------------------------FOOTER-----------------------*/
+
+.footer {
+    grid-area: footer;
+    height: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.footer>img {
+    width: 250px;
+    height: 120px;
+}
+
+/*------------MQ------------*/
+
+@media screen and (max-width:1319px) {
+    .sectionServicios__uno img {
+        height: 300px;
+        width: 300px;
+    }
+    .sectionServicios__dos img {
+        height: 300px;
+        width: 300px;
+    }
+    .section__cuidadosTres div .tituloParrafo {
+        margin: 40px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width:1229px) {
+    .section__uno div div img {
+        height: 300px;
+        width: 350px;
+    }
+
+}

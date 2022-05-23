@@ -83,11 +83,11 @@ body {
     font-weight: bold;
 }
 
-.hero p{
+.hero p {
     font-size: 30px;
 }
 
-.hero a{
+.hero a {
     background-color: rgb(138, 13, 131);
     text-decoration: none;
     color: white;
@@ -102,13 +102,14 @@ body {
     background-color: #d9c0ff;
 }
 
-.especialidades{
+.especialidades {
     margin: 20px 0 20px 0;
 }
 
-.especialidades h2{
+.especialidades h2 {
     text-align: center;
 }
+
 .especialidades>div {
     display: flex;
     flex-wrap: wrap;
@@ -129,14 +130,14 @@ body {
 
 }
 
-.servicios > div {
+.servicios>div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.servicios > div div {
+.servicios>div div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -146,7 +147,7 @@ body {
     width: 300px;
     height: 450px;
     text-align: center;
-    box-shadow: 10px 10px 24px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 24px -7px rgba(0, 0, 0, 0.75);
 }
 
 .servicios div div a {
@@ -159,7 +160,7 @@ body {
     text-decoration: none;
 }
 
-.servicios h2{
+.servicios h2 {
     font-size: 40px;
     text-align: center;
     padding: 10px;
@@ -240,7 +241,7 @@ body {
     color: white !important;
 }
 
-.footer h3{
+.footer h3 {
     font-family: 'Tapestry', cursive !important;
     font-size: 18px !important;
     font-weight: bold !important;
@@ -259,10 +260,12 @@ body {
         height: 300px;
         width: 300px;
     }
+
     .sectionServicios__dos img {
         height: 300px;
         width: 300px;
     }
+
     .section__cuidadosTres div .tituloParrafo {
         margin: 40px;
         font-size: 30px;

@@ -7,9 +7,9 @@
 }
 
 body {
-    font-family: 'Tapestry', cursive;
-    font-size: 18px;
-    color: black;
+    font-family: 'Tapestry', cursive !important;
+    font-size: 18px !important;
+    color: black !important;
 }
 
 .container {
@@ -282,17 +282,24 @@ body {
 
 .footer {
     grid-area: footer;
-    height: 120px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+    height: 120px !important;
+    background-color: black !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: white !important;
+}
+
+.footer h3{
+    font-family: 'Tapestry', cursive !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+
 }
 
 .footer>img {
-    width: 250px;
-    height: 120px;
+    width: 250px !important;
+    height: 120px !important;
 }
 
 /*------------MQ------------*/

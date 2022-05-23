@@ -99,34 +99,24 @@ body {
 
 .main {
     grid-area: main;
-    display: flex;
     background-color: #d9c0ff;
-    flex-direction: column;
 }
 
-.section__uno {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.especialidades{
+    margin: 20px 0 20px 0;
 }
 
-.section__uno>div {
+.especialidades h2{
+    text-align: center;
+}
+.especialidades>div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-.section__uno div div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-
-.section__uno div div img {
+.especialidades div figure img {
     height: 300px;
     width: 400px;
 }
@@ -135,90 +125,50 @@ body {
 
 .mainServicios {
     grid-area: main;
-    display: flex;
     background-color: #d9c0ff;
-    flex-direction: column;
 
 }
 
-.sectionServicios__uno {
+.servicios > div {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-}
-
-.sectionServicios__uno ul {
-    display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.sectionServicios__uno ul li {
-    display: flex;
-    padding: 20px;
-}
-
-.sectionServicios__uno ul li div {
+.servicios > div div {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    box-shadow: 10px 10px 24px -7px rgba(0,0,0,0.75);
 }
 
-.sectionServicios__uno ul li div a {
+.servicios div div a {
     background-color: blueviolet;
     font-size: 20px;
     font-weight: 500;
     color: black;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     text-decoration: none;
 }
 
-.sectionServicios__uno img {
+.servicios h2{
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.servicios div div img {
     height: 300px;
-    width: 400px;
-}
-
-.sectionServicios__dos {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sectionServicios__dos ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sectionServicios__dos ul li {
-    display: flex;
-    padding: 20px;
-}
-
-.sectionServicios__dos ul li div {
-    display: flex;
-    flex-direction: column;
-}
-
-.sectionServicios__dos ul li div a {
-    background-color: blueviolet;
-    font-size: 20px;
-    font-weight: 500;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-.sectionServicios__dos img {
-    height: 300px;
-    width: 400px;
+    width: 300px;
+    border-radius: 15px;
 }
 
 /*--------------------------MAIN---CUIDADOS----------------*/

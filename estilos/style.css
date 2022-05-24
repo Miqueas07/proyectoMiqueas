@@ -98,7 +98,7 @@ body {
     transition: 1s;
 }
 
-.hero a:hover {
+.hero a:hover{
     transform: scale(1.1);
 }
 
@@ -132,7 +132,6 @@ body {
 .especialidades div figure img:hover {
     transform: scale(1.1);
 }
-
 /*-----------------------MAIN--SERVICIOS-----------------*/
 
 .mainServicios {
@@ -277,7 +276,7 @@ body {
     font-size: 40px;
 }
 
-.presentacion {
+.presentacion{
     font-size: 30px;
     text-align: center;
 }
@@ -292,7 +291,7 @@ body {
     margin: 2px 0 2px 0;
 }
 
-.contacto {
+.contacto{
     display: flex;
     flex-direction: column;
     width: 700px;

@@ -19,38 +19,8 @@ body {
     height: 80px;
 }
 
-.header {
-    height: 80px;
-    background-color: #d9c0ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header img {
-    width: 250px;
-    height: 80px;
-}
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.header nav ul li {
-    margin-left: 15px;
-    margin-right: 10px;
-}
-
-.header nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-}
-
-.header nav ul li a:hover {
-    color: rgb(138, 13, 131);
-    transition: 1s;
+.navbar-nav a{
+    color: rgb(138, 13, 131) !important;
 }
 
 /*-----------------MAIN------------------------*/

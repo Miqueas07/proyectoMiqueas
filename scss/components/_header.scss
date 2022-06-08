@@ -1,0 +1,15 @@
+@import "../base/variable";
+
+.header {
+    img {
+        width: 250px;
+        height: 80px;
+    }
+}
+
+.navbar-nav {
+    a {
+        color: $terciario  !important;
+    }
+
+}

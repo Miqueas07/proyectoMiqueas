@@ -1,0 +1,339 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tapestry', cursive !important;
+  font-size: 18px !important;
+  color: black !important;
+}
+
+.header img {
+  width: 250px;
+  height: 80px;
+}
+
+.navbar-nav a {
+  color: blueviolet !important;
+}
+
+/***************INDEX**************/
+.hero {
+  width: 100%;
+  height: 80vh;
+  background: url(../img/Baddies\Girls\Nails.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: blueviolet;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 30px;
+}
+
+.hero a {
+  background-color: blueviolet;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hero a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main {
+  background-color: #d9c0ff;
+}
+
+.especialidades {
+  margin: 20px 0 0 0;
+  padding: 10px;
+}
+
+.especialidades h2 {
+  text-align: center;
+  margin: 2px;
+}
+
+.especialidades div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.especialidades div figure img {
+  height: 300px;
+  width: 400px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.especialidades div figure img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/***************SERVICIOS****************/
+.mainServicios {
+  background-color: #d9c0ff;
+}
+
+.servicios h2 {
+  background-color: blueviolet;
+  width: 100%;
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.servicios div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.servicios div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+  -webkit-box-shadow: 10px 10px 24px -7px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 24px -7px rgba(0, 0, 0, 0.75);
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin: 20px 0 20px 0;
+}
+
+.servicios div div img {
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.servicios div div a {
+  background-color: blueviolet;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.servicios div div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/***************QUIENES-SOMOS*****************/
+.mainQS {
+  background-color: #d9c0ff;
+  margin: 2px 0 2px 0;
+}
+
+.heroQS {
+  width: 100%;
+  height: 80vh;
+  background: url(../img/retirado\Semi.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: blueviolet;
+}
+
+.heroQS h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.heroQS p {
+  font-size: 40px;
+}
+
+.presentacion {
+  font-size: 30px;
+  text-align: center;
+}
+
+/***************CUIDADOS*****************/
+.mainCuidados {
+  background-color: #d9c0ff;
+}
+
+.mainCuidados h2 {
+  text-align: center;
+}
+
+.mainCuidados img {
+  height: 600px;
+  width: 500px;
+}
+
+.section__cuidadosUno div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__cuidadosDos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__cuidadosTres div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tituloParrafo {
+  margin: 40px;
+}
+
+/***************CONTACTO*****************/
+.maincontacto {
+  background-color: #d9c0ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2px 0 2px 0;
+}
+
+.contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 700px;
+  padding: 25px;
+}
+
+.footer {
+  height: 120px !important;
+  background-color: black !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  color: white !important;
+}
+
+.footer h3 {
+  font-family: 'Tapestry', cursive !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+.footer img {
+  width: 250px !important;
+  height: 120px !important;
+}
+
+.redes a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 3px;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

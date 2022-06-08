@@ -1,0 +1,29 @@
+@import "../base/variable";
+
+.footer {
+    height: 120px !important;
+    background-color: $secundario  !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: $opcional !important;
+
+    h3 {
+        font-family: 'Tapestry', cursive !important;
+        font-size: 18px !important;
+        font-weight: bold !important;
+    }
+
+    img {
+        width: 250px !important;
+        height: 120px !important;
+    }
+
+}
+
+.redes a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 3px;
+    color: $opcional;
+}

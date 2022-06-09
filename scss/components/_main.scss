@@ -81,7 +81,7 @@
     h2 {
         background-color: $terciario;
         width: 100%;
-        color: white;
+        color: $secundario;
         font-weight: 900;
         font-size: 40px;
         text-align: center;
@@ -115,7 +115,7 @@
             }
 
             a {
-                background-color: $terciario;
+                background-color: $cuarto;
                 font-size: 20px;
                 font-weight: 500;
                 color: $secundario;
@@ -134,7 +134,6 @@
 /***************QUIENES-SOMOS*****************/
 .mainQS {
     background-color: $primario;
-    margin: 2px 0 2px 0;
 }
 
 .heroQS {
@@ -180,31 +179,38 @@
     }
 }
 
-.section__cuidadosUno {
-    div {
-        display: flex;
-        align-items: center;
-    }
-}
+.secciones {
+    display: flex;
+    flex-direction: column;
 
-.section__cuidadosDos {
-    div {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
+    .section__cuidadosUno {
+        div {
+            display: flex;
+            align-items: center;
+        }
     }
-}
 
-.section__cuidadosTres {
-    div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    .section__cuidadosDos {
+        div {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
     }
-}
 
-.tituloParrafo {
-    margin: 40px;
+    .section__cuidadosTres {
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .tituloParrafo {
+        display: flex;
+        flex-direction: column !important;
+        margin: 40px;
+    }
+
 }
 
 /***************CONTACTO*****************/
@@ -212,7 +218,6 @@
     background-color: $primario;
     display: flex;
     justify-content: center;
-    margin: 2px 0 2px 0;
 }
 
 .contacto {

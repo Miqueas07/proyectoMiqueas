@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +18,7 @@ body {
 }
 
 .navbar-nav a {
-  color: blueviolet !important;
+  color: #8a0d83 !important;
 }
 
 /***************INDEX**************/
@@ -41,7 +42,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: blueviolet;
+  color: #8a0d83;
 }
 
 .hero h1 {
@@ -54,7 +55,7 @@ body {
 }
 
 .hero a {
-  background-color: blueviolet;
+  background-color: #8a0d83;
   text-decoration: none;
   color: white;
   font-size: 30px;
@@ -115,9 +116,9 @@ body {
 }
 
 .servicios h2 {
-  background-color: blueviolet;
+  background-color: #8a0d83;
   width: 100%;
-  color: white;
+  color: black;
   font-weight: 900;
   font-size: 40px;
   text-align: center;
@@ -187,7 +188,6 @@ body {
 /***************QUIENES-SOMOS*****************/
 .mainQS {
   background-color: #d9c0ff;
-  margin: 2px 0 2px 0;
 }
 
 .heroQS {
@@ -210,7 +210,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: blueviolet;
+  color: #8a0d83;
 }
 
 .heroQS h1 {
@@ -241,7 +241,17 @@ body {
   width: 500px;
 }
 
-.section__cuidadosUno div {
+.secciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.secciones .section__cuidadosUno div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,7 +260,7 @@ body {
           align-items: center;
 }
 
-.section__cuidadosDos div {
+.secciones .section__cuidadosDos div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,20 +273,23 @@ body {
           align-items: center;
 }
 
-.section__cuidadosTres div {
+.secciones .section__cuidadosTres div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.tituloParrafo {
+.secciones .tituloParrafo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
   margin: 40px;
 }
 
@@ -289,7 +302,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2px 0 2px 0;
 }
 
 .contacto {

@@ -348,4 +348,81 @@ body {
   margin-left: 3px;
   color: white;
 }
+
+@media screen and (max-width: 944px) {
+  .footer p {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mainCuidados img {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 898px) {
+  .heroQS p {
+    font-size: 37px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .footer p {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .footer img {
+    width: 190px !important;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .section__cuidadosUno div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .section__cuidadosDos div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+  .section__cuidadosTres div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .footer h3 {
+    font-size: 15px !important;
+  }
+  .footer p {
+    font-size: 10px !important;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

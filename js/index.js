@@ -11,7 +11,7 @@ let nombreCompleto = nombre + espacio + apellido
 alert('Holaa ' + nombreCompleto + ' es un placer tenerte por aqui!')
 
 
-let saludos = parseInt(prompt("Estamos tan felices de tenerte que te saludaremos las veces que quieras! Indica la cantidad de veces que quieres un saludo de nuetra parte"))
+/*let saludos = parseInt(prompt("Estamos tan felices de tenerte que te saludaremos las veces que quieras! Indica la cantidad de veces que quieres un saludo de nuetra parte"))
 
 const bienvenida = "Buenass ";
 
@@ -39,7 +39,29 @@ while (palabrasAmostrar != "ESC") {
 
 }
 
+
 alert(cadena); // saludando al cliente
+*/
+
+alert('Queridos clientes a continuacion les mostraremos los nuevos precios de los servicios a realizar debido a la reciente suba tan brusta del dolar')
+
+
+const servicios = [
+    {'nombre': 'Esmaltado semipermanente manos', 'precio': 1300},
+    {'nombre': 'Esmaltado semipermanente pies', 'precio': 1200},
+    {'nombre': 'capping en acrilico', 'precio': 1500},
+    {'nombre': 'manicura rusa manos', 'precio': 1000},
+    {'nombre': 'pedicura rusa', 'precio': 1000},
+    {'nombre': 'retirado semipermanente', 'precio': 300}
+]
+
+const serviciosActualizados = servicios.map( (e) => e.precio * 2)
+
+/*for(servicios of nombre){
+    console.log(`${servicios.nombre} precio: ${servicios.precio}`)
+}*/
+
+
 
 let cuotas
 let totalApagar
@@ -102,3 +124,11 @@ function imprimirCuotas(dinero,cuotas,totalApagar) {
         }
     } while (cuotas != 0)
 }
+
+
+
+
+
+
+
+

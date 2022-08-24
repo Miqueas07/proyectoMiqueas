@@ -224,3 +224,24 @@
     width: 700px;
     padding: 25px;
 }
+
+/****************ABM*****************************/
+.mainAbm{
+    background-color: $primario;
+}
+.contenedor{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+}
+.contenedor_cabecera {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 1rem;
+}
+.contenedorTabla{
+    padding: 2rem;
+    width: 70% !important;
+}

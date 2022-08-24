@@ -316,6 +316,36 @@ body {
   padding: 25px;
 }
 
+/****************ABM*****************************/
+.mainAbm {
+  background-color: #d9c0ff;
+}
+
+.contenedor {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.contenedor_cabecera {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 1rem;
+}
+
+.contenedorTabla {
+  padding: 2rem;
+  width: 70% !important;
+}
+
 .footer {
   height: 120px !important;
   background-color: black !important;

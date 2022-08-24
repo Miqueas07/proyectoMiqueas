@@ -1,134 +1,286 @@
-let nombre
-let apellido
-const espacio = ' '
-
-nombre = prompt("Como es tu nombre?")
-
-apellido = prompt("Cual es tu apellido?")
-
-let nombreCompleto = nombre + espacio + apellido
-
-alert('Holaa ' + nombreCompleto + ' es un placer tenerte por aqui!')
 
 
-/*let saludos = parseInt(prompt("Estamos tan felices de tenerte que te saludaremos las veces que quieras! Indica la cantidad de veces que quieres un saludo de nuetra parte"))
 
-const bienvenida = "Buenass ";
+//----------------Funciones-----------//
+let productos = [];
 
-// la variable " i " no es necesaria mostrarla
-
-for (i = 0; i < saludos; i++) {
-
-    console.log(bienvenida + nombre);
-
+function generarId(numero) {
+    return numero + 1
 }
 
-let palabrasAmostrar = prompt('Ingresa las palabras que quieras para formar una frase u oracion, para finalizar escribe "ESC"');
+function agregarElemento() {
 
-let cadena = ""; // guardar esta variable sin espacios, ya que el espacio cuenta como un carácter
-
-console.log(cadena);
-
-while (palabrasAmostrar != "ESC") {
-
-    cadena += palabrasAmostrar + "\n"; // "\n" ===> es igual a un enter, pone uno abajo del otro
-
-    // "+="" operador que reemplaza a "cadena = cadena + "
-
-    palabrasAmostrar = prompt("Ingresa otra palabra. Para finalizar escribe ESC");
-
-}
-
-
-alert(cadena); // saludando al cliente
-*/
-
-alert('Queridos clientes a continuacion les mostraremos los nuevos precios de los servicios a realizar debido a la reciente suba tan brusta del dolar')
-
-
-const servicios = [
-    {'nombre': 'Esmaltado semipermanente manos', 'precio': 1300},
-    {'nombre': 'Esmaltado semipermanente pies', 'precio': 1200},
-    {'nombre': 'capping en acrilico', 'precio': 1500},
-    {'nombre': 'manicura rusa manos', 'precio': 1000},
-    {'nombre': 'pedicura rusa', 'precio': 1000},
-    {'nombre': 'retirado semipermanente', 'precio': 300}
-]
-
-const serviciosActualizados = servicios.map( (e) => e.precio * 2)
-
-/*for(servicios of nombre){
-    console.log(`${servicios.nombre} precio: ${servicios.precio}`)
-}*/
-
-
-
-let cuotas
-let totalApagar
-let decision = prompt("Vas a pagar en efectivo o con tarjeta?")
-
-if (decision == "efectivo") {
-    console.log("Pagas el total sin intereses")
-}
-
-if (decision == "tarjeta") {
-
-    
-    let dinero = parseInt(prompt("Cuanto dinero quieres pasar con la tarjeta?"))
-
-    let cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-    let totalApagar
-    imprimirCuotas(dinero,cuotas,totalApagar)
-
-}
-
-function imprimirCuotas(dinero,cuotas,totalApagar) {
-
-    do {
-        switch (cuotas) {
-            case 1:
-                console.log('lo va a pagar en 1 cuotas')
-                totalApagar = dinero + (dinero * 0.01)
-                console.log("el total a pagar es de " + totalApagar)
-                cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-                break;
-            case 2:
-                console.log('lo va a pagar en 2 cuota')
-                totalApagar = dinero + (dinero * 0.03)
-                console.log("el total a pagar es de " + totalApagar)
-                cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-                break;
-            case 3:
-                console.log('lo va a pagar en 3 cuota')
-                totalApagar = dinero + (dinero * 0.05)
-                console.log("el total a pagar es de " + totalApagar)
-                cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-                break;
-            case 6:
-                console.log('lo va a pagar en 6 cuota')
-                totalApagar = dinero + (dinero * 0.10)
-                console.log("el total a pagar es de " + totalApagar)
-                cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-                break;
-            case 12:
-                console.log('lo va a pagar en 12 cuota')
-                totalApagar = dinero + (dinero * 0.20)
-                console.log("el total a pagar es de " + totalApagar)
-                cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-                break;
-            default:
-                console.log('Ingresaste CUALQUIER COSA, lee bien!')
-                cuotas = parseInt(prompt("ingrese la cantidad de cuotas en las cuales quiere pagar ese dinero (1,2,3,6,12) \n selecione (0) para cancelar"))
-                break
+    class Producto {
+        constructor(id, articulo, stock, precio) {
+            this.id = id;
+            this.articulo = articulo;
+            this.stock = stock;
+            this.precio = precio;
 
         }
-    } while (cuotas != 0)
+    }
+
+    //reemplazo del if por un operador ternario
+    localStorage.length === 0 ?
+
+        listaMemoria = []
+
+        :
+
+        listaMemoria = JSON.parse(localStorage.getItem('listaProductos'));
+
+    let id = generarId(listaMemoria.length);
+
+
+    (async () => {
+
+        const { value: articulo } = await Swal.fire({
+            title: "Ingrese el producto",
+            input: "text",
+            showCancelButton: false,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "Por favor ingrese un producto";
+                }
+            },
+        });
+
+        const { value: stock } = await Swal.fire({
+            title: "Ingrese el Stock",
+            input: "text",
+            showCancelButton: false,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "Por favor ingrese el stock";
+                }
+            },
+        });
+
+        const { value: valor } = await Swal.fire({
+            title: "Ingrese el Precio",
+            input: "text",
+            showCancelButton: false,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "Por favor ingrese un valor";
+                }
+            },
+        });
+
+
+        productos.push(new Producto(id, articulo, stock, valor));
+
+        listaMemoria.push(new Producto(id, articulo, stock, valor));
+
+        localStorage.setItem('listaProductos', JSON.stringify(listaMemoria));
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Producto agregado correctamente',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+        setTimeout(() => {
+            location.reload()
+        }, 1600);
+
+    })(); //cierre del async
+
+} //final de la funcion agregar elemento
+
+//Funcion para eliminar producto
+function eliminarProducto(productID) {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Producto eliminado',
+        showConfirmButton: false,
+        timer: 1500
+    })
+    eliminarProductoLocalStorage(productID);
 }
 
+function eliminarProductoLocalStorage(productID) {
+    let productosLS = JSON.parse(localStorage.getItem('listaProductos'));
 
+    productosLS = productosLS.filter(elemento => elemento.id != productID);
 
+    localStorage.setItem('listaProductos', JSON.stringify(productosLS));
 
+    setTimeout(() => {
+        location.reload()
+    }, 1600);
+}
+//fin de eliminar producto
 
+//funcion modificar productos
+function editarElemento(producID) {
 
+    (async () => {
 
+        const { value: opcion } = await Swal.fire({
+          title: "Ingrese el item a editar",
+          input: "text",
+          inputLabel: '1-Producto 2- Stock 3- Precio',
+          showCancelButton: false,
+          inputValidator: (value) => {
+            if (!value) {
+              return "Por favor ingrese un valor";
+            }
+          },
+        });
 
+        modificarProducto (opcion, producID)
+
+    })(); //cierre del async
+
+}
+
+function modificarProducto(opcion, id){
+    let productosLS = JSON.parse(localStorage.getItem('listaProductos'));
+    if(opcion == 1){
+        (async () => {
+
+            const { value: nombreProducto } = await Swal.fire({
+              title: "Ingrese el nuevo nombre",
+              input: "text",
+              showCancelButton: false,
+              inputValidator: (value) => {
+                if (!value) {
+                  return "Por favor ingrese un valor";
+                }
+              },
+            });
+            
+            let elemento = productosLS.find(elemento => elemento.id == id);
+            elemento.nombre = nombreProducto;
+            
+            localStorage.setItem('listaProductos', JSON.stringify(productosLS));
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'El nombre se modificó correctamente',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+            setTimeout(() => {
+                location.reload()
+            }, 1600);
+
+        })(); //cierre del async
+
+    }else if(opcion == 2){
+            (async () => {
+
+                const { value: stockProducto } = await Swal.fire({
+                  title: "Ingrese el nuevo stock",
+                  input: "text",
+                  showCancelButton: false,
+                  inputValidator: (value) => {
+                    if (!value) {
+                      return "Por favor ingrese un valor";
+                    }
+                  },
+                });
+
+            let elemento = productosLS.find(elemento => elemento.id == id);
+            elemento.stock = stockProducto;
+
+            localStorage.setItem('listaProductos', JSON.stringify(productosLS));
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'El stock se modificó correctamente',
+                showConfirmButton: false,
+                timer: 1500
+        })
+                setTimeout(() => {
+                    location.reload()
+                }, 1600);
+
+            })(); //cierre del async
+
+    }else if(opcion == 3){
+            (async () => {
+
+                const { value: precioProducto } = await Swal.fire({
+                  title: "Ingrese el nuevo precio",
+                  input: "text",
+                  showCancelButton: false,
+                  inputValidator: (value) => {
+                    if (!value) {
+                      return "Por favor ingrese un valor";
+                    }
+                  },
+                });
+            
+            let elemento = productosLS.find(elemento => elemento.id == id);
+            elemento.precio = precioProducto;
+
+            localStorage.setItem('listaProductos', JSON.stringify(productosLS));
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'El precio se modificó correctamente',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+                setTimeout(() => {
+                    location.reload()
+                }, 1600);
+
+            })(); //cierre del async
+
+    }else{
+
+    }
+
+}
+//--------------Cierre----Funciones-----------//
+
+//------------TABLA---------------------------//
+if(localStorage.length === 0){
+
+}else{
+
+//---------Parseado de datos con JSON desde local storage-------------
+
+let listaProds = JSON.parse(localStorage.getItem('listaProductos'))
+
+//---------Acá distribuye los elementos en la tabla-----------------
+
+let tablaProds = document.getElementById("listado")
+
+for (const producto of listaProds) {
+
+let filas = document.createElement("tr")
+
+filas.innerHTML = `
+                    <td>${producto.id}</td>
+                    <td>${producto.articulo}</td>
+                    <td>$ ${producto.precio}</td>
+                    <td>${producto.stock}</td>
+                    <td id="editar${producto.id}"> <a href="#" "><img src="../img/iconoEditar.png" alt="editar" width="20px"></a></td>
+                    <td id="borrar${producto.id}"><button type="button" class="btn-close btn-close-white" aria-label="Close"></button> </td>
+                    `;
+
+tablaProds.appendChild(filas);
+
+document.getElementById(`editar${producto.id}`).addEventListener("click", () => {editarElemento(`${producto.id}`);});
+
+document.getElementById(`borrar${producto.id}`).addEventListener("click", () => {eliminarProducto(`${producto.id}`);});
+
+}; //cierre del for
+
+}; //cierre del else
+
+//----------------Captura de botones y acciones----------------------------
+
+document.getElementById("agregar").addEventListener("click", () => {agregarElemento();});

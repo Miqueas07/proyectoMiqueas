@@ -319,6 +319,7 @@ body {
 /****************ABM*****************************/
 .mainAbm {
   background-color: #d9c0ff;
+  height: 800px !important;
 }
 
 .contenedor {
